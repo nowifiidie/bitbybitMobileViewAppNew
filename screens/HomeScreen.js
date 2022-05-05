@@ -1,14 +1,30 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Button } from 'react-native';
+import React from 'react';
+import RequestScreen from './RequestScreen';
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from '@react-navigation/drawer';
+import ForgerPasswordScreen from './ForgerPasswordScreen';
+import HistoryScreen from './HistoryScreen';
+import CustomDrawer from '../components/CustomDrawer/CustomDrawer';
+
+const Drawer = createDrawerNavigator();
+
 
 const HomeScreen = () => {
   return (
-    <View>
-      <Text>Home Screen</Text>
-    </View>
-  )
+
+    <Drawer.Navigator useLegacyImplementation drawerContent={props => <CustomDrawer {...props} />}>
+      <Drawer.Screen name="Request" component={RequestScreen} />
+      <Drawer.Screen name="History" component={HistoryScreen} />
+    </Drawer.Navigator>
+
+  );
 }
 
-export default HomeScreen
+export default HomeScreen;
 
 const styles = StyleSheet.create({})
