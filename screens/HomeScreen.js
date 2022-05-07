@@ -13,12 +13,13 @@ import CustomDrawer from '../components/CustomDrawer/CustomDrawer';
 import LogoutScreen from './LogoutScreen';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import NofiticationScreen from './NofiticationScreen';
+import LoginScreen from './LoginScreen';
 
 const Drawer = createDrawerNavigator();
 
 
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
 
 
@@ -42,7 +43,7 @@ const HomeScreen = () => {
           <Ionicons name="refresh-circle-sharp" size={22} color={color} />
         ),
       }}/>
-      <Drawer.Screen name="Logout" component={LogoutScreen} 
+      <Drawer.Screen name="Logout" 
       options={{
         drawerIcon: ({color}) => (
           <Ionicons name="log-out-sharp" size={22} color={color} />

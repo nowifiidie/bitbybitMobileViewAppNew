@@ -2,7 +2,7 @@ import { SafeAreaView, StyleSheet, View, Text, FlatList} from 'react-native'
 import React, { useState } from 'react'
 
 
-const NofiticationScreen = () => {
+const NofiticationScreen = ({navigation}) => {
   const [dataSource, setDataSource] = useState([
     { id: "B010", title: 'Text' },
     { id: 2, title: 'Text' },
@@ -11,6 +11,7 @@ const NofiticationScreen = () => {
 
   const EmptyListMessage = ({ item }) => {
     return (
+      
       // Flat List Item
       <Text style={styles.emptyListStyle} onPress={() => getItem(item)}>
         No Data Found
@@ -21,16 +22,14 @@ const NofiticationScreen = () => {
   const ItemView = ({ item }) => {
     return (
       // Flat List Item
-      <View>
-        <Text style={styles.itemStyle} onPress={() => getItem(item)}>
+      <View style={styles.itemStyle}>
+        <Text>
         Booking ID: {item.id}
       </Text>
-      <Text style={styles.itemStyle} onPress={() => getItem(item)}>
+      <Text  >
         {item.title.toUpperCase()}
       </Text>
       </View>
-      
-      
       
     );
   };
@@ -40,9 +39,9 @@ const NofiticationScreen = () => {
       // Flat List Item Separator
       <View
         style={{
-          height: 0.5,
+          
           width: '100%',
-          backgroundColor: '#C8C8C8',
+          backgroundColor: '##6e3b6e',
         }}
       />
     );
@@ -72,7 +71,6 @@ const NofiticationScreen = () => {
         ItemSeparatorComponent={ItemSeparatorView}
         //Header to show above listview
         ListHeaderComponent={ListHeader}
-        
         renderItem={ItemView}
         ListEmptyComponent={EmptyListMessage}
       />
@@ -87,7 +85,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   itemStyle: {
-    padding: 10,
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+    backgroundColor:'#f9c2ff',
   },
   headerStyle: {
     width: '100%',

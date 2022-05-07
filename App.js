@@ -8,6 +8,8 @@ import LoginScreen from './screens/LoginScreen';
 import ForgerPasswordScreen from './screens/ForgerPasswordScreen';
 import RequestScreen from './screens/RequestScreen';
 import HistoryScreen from './screens/HistoryScreen';
+import NofiticationScreen from './screens/RequestScreen';
+import RequestDetailScreen from './screens/RequestDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +23,9 @@ export default function App() {
                 <Stack.Screen name="ForgetPassword" component={ForgerPasswordScreen} />
                 <Stack.Screen name="Request" component={RequestScreen} />
                 <Stack.Screen name="History" component={HistoryScreen} />
+                <Stack.Screen name="Nofitication" component={NofiticationScreen} />
+                <Stack.Screen name="RequestDetail" component={RequestDetailScreen} />
+
             </Stack.Navigator>
         </NavigationContainer>
     );
