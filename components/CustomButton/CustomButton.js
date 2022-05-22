@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Pressable } from 'react-native'
+import { StyleSheet, Text, View, Button, Alert,Pressable } from 'react-native'
 import React from 'react'
 
 const CustomButton = ({ onPress, text, type = "PRIMARY" }) => {

@@ -3,9 +3,6 @@ import React from 'react';
 import RequestScreen from './RequestScreen';
 import {
   createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem,
 } from '@react-navigation/drawer';
 import ForgerPasswordScreen from './ForgerPasswordScreen';
 import HistoryScreen from './HistoryScreen';
@@ -19,12 +16,15 @@ const Drawer = createDrawerNavigator();
 
 
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = () => {
   return (
 
 
-    <Drawer.Navigator useLegacyImplementation drawerContent={props => <CustomDrawer {...props} initialRouteName="Home" />}>
-      <Drawer.Screen name="Home" component={NofiticationScreen}
+    <Drawer.Navigator useLegacyImplementation 
+    drawerContent={props => <CustomDrawer {...props}  />}
+    screenOptions={{drawerLabelStyle:{marginleft:-25}}}
+    >
+      <Drawer.Screen name="Nof" component={NofiticationScreen}
         options={{
           drawerIcon: ({ color }) => (
             <Ionicons name="home-sharp" size={22} color={color} />
@@ -43,12 +43,7 @@ const HomeScreen = ({navigation}) => {
           <Ionicons name="refresh-circle-sharp" size={22} color={color} />
         ),
       }}/>
-      <Drawer.Screen name="Logout" 
-      options={{
-        drawerIcon: ({color}) => (
-          <Ionicons name="log-out-sharp" size={22} color={color} />
-        ),
-      }}/>
+    
 
     </Drawer.Navigator>
 

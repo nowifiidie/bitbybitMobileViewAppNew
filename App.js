@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer,useNavigation } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
@@ -10,6 +10,7 @@ import RequestScreen from './screens/RequestScreen';
 import HistoryScreen from './screens/HistoryScreen';
 import NofiticationScreen from './screens/RequestScreen';
 import RequestDetailScreen from './screens/RequestDetailScreen';
+import HistoryDetailScreen from './screens/HistoryDetailsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ export default function App() {
                 <Stack.Screen name="History" component={HistoryScreen} />
                 <Stack.Screen name="Nofitication" component={NofiticationScreen} />
                 <Stack.Screen name="RequestDetail" component={RequestDetailScreen} />
+                <Stack.Screen name="HistoryDetail" component={HistoryDetailScreen} />
 
             </Stack.Navigator>
         </NavigationContainer>
