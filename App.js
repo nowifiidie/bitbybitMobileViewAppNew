@@ -11,6 +11,10 @@ import HistoryScreen from './screens/HistoryScreen';
 import NofiticationScreen from './screens/RequestScreen';
 import RequestDetailScreen from './screens/RequestDetailScreen';
 import HistoryDetailScreen from './screens/HistoryDetailsScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import EditProfileScreen from './screens/EditProfileScreen';
+import AssignVehicle from './screens/AssignVehicle';
+import AssignDriver from './screens/AssignDriver';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,7 +31,10 @@ export default function App() {
                 <Stack.Screen name="Nofitication" component={NofiticationScreen} />
                 <Stack.Screen name="RequestDetail" component={RequestDetailScreen} />
                 <Stack.Screen name="HistoryDetail" component={HistoryDetailScreen} />
-
+                <Stack.Screen name="Profile" component={ProfileScreen} />
+                <Stack.Screen name="EditProfile" component={EditProfileScreen} />
+                <Stack.Screen name="AssignVehicle" component={AssignVehicle} />
+                <Stack.Screen name="AssignDriver" component={AssignDriver} />
             </Stack.Navigator>
         </NavigationContainer>
     );

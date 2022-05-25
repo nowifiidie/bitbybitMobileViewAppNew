@@ -18,11 +18,19 @@ const CustomDrawer = (props) => {
       navigation.navigate('Login');
   }
 
+  const onProfilePressed = () => {
+    console.warn("Profile");
+    //validate user
+
+    navigation.navigate('Profile');
+}
+
     return (
         <View style={{flex:1}}>
        <DrawerContentScrollView
         {...props}
         contentContainerStyle={{backgroundColor: '#8200d6'}}>
+          <TouchableOpacity onPress={() => onProfilePressed()} style={{paddingVertical: 15}}>
         <ImageBackground
           source={require('../../assets/images/menu-bg.jpg')}
           style={{padding: 20}}>
@@ -35,16 +43,18 @@ const CustomDrawer = (props) => {
             style={{
               color: '#fff',
               fontSize: 18,
-              fontFamily: 'Roboto-Medium',
               marginBottom: 5,
             }}>
             John Doe
           </Text>
          
         </ImageBackground>
+        </TouchableOpacity>
         <View style={{flex: 1, backgroundColor: '#fff', paddingTop: 10}}>
           <DrawerItemList {...props} />
+          
         </View>
+        
       </DrawerContentScrollView>
       <View style={{padding:20,borderTopWidth:1,borderTopColor:'#ccc'}}>
         

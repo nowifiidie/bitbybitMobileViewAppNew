@@ -31,7 +31,7 @@ const HomeScreen = () => {
           ),
         }} />
 
-      <Drawer.Screen name="Request" component={RequestScreen} 
+      <Drawer.Screen name="List of Request" component={RequestScreen} 
       options={{
         drawerIcon: ({color}) => (
           <Ionicons name="information-circle-sharp" size={22} color={color} />
