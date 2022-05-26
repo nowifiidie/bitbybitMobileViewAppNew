@@ -52,15 +52,16 @@ function App() {
             "Are You Sure",
             [
                 {
-                    text: "Confirm",
-                    onPress: () => Alert.alert("Confirm Pressed"),
-                    style: "confirm",
-                },
-                {
                     text: "Cancel",
                     onPress: () => Alert.alert("Cancel Pressed"),
                     style: "cancel",
                 },
+                {
+                    text: "Confirm",
+                    onPress: () => Alert.alert("Confirm Pressed"),
+                    style: "confirm",
+                },
+               
             ],
             {
                 cancelable: true,

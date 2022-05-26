@@ -4,7 +4,7 @@ import RequestScreen from './RequestScreen';
 import {
   createDrawerNavigator,
 } from '@react-navigation/drawer';
-import ForgerPasswordScreen from './ForgerPasswordScreen';
+import ForgerPasswordScreen from './ForgetPasswordScreen';
 import HistoryScreen from './HistoryScreen';
 import CustomDrawer from '../components/CustomDrawer/CustomDrawer';
 import LogoutScreen from './LogoutScreen';

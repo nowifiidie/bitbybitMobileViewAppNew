@@ -1,10 +1,8 @@
 import { StyleSheet, Text, View, Image, useWindowDimensions } from 'react-native';
 import React, { useState } from 'react';
-import Logo from '../../mobileviewApp/assets/images/logo.png';
-import CustomInput from '../../mobileviewApp/components/CustomInput/CustomInput';
+import CustomInput from '../components/CustomInput/CustomInput';
 import CustomButton from '../components/CustomButton';
 import { useNavigation } from '@react-navigation/native';
-import { NavigationEvents } from 'react-navigation';
 
 const ForgetPassword = () => {
   const [password, setPassword] = useState('');
